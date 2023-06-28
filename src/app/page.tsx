@@ -1,8 +1,13 @@
 import Link from "next/link";
 import { prisma } from "./db";
+import { get } from "http";
+
+function getTodos() {
+  return prisma.todo.findMany();
+}
 
 export default async function Home() {
-  const todos = await prisma.todo.findMany();
+  const todos = await getTodos();
 
   return (
     <>
