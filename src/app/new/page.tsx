@@ -1,3 +1,3 @@
 export default function New() {
-  <h1>new</h1>;
+  return <h1>new</h1>;
 }
